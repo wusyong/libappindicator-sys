@@ -1,0 +1,15 @@
+[package]
+name = "libappindicator-sys"
+version = "0.1.0"
+authors = ["Kyle Machulis <kyle@nonpolynomial.com>"]
+description = "Rust raw bindings for libappindicator"
+license = "BSD-3-Clause"
+homepage = "http://github.com/qdot/libappindicator-rs"
+repository = "https://github.com/qdot/libappindicator-rs.git"
+readme = "README.md"
+keywords = ["linux", "gui"]
+build = "build.rs"
+
+[build-dependencies]
+bindgen = "0.22"
+pkg-config = "0.3"
