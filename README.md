@@ -1,6 +1,6 @@
 # libappindicator-sys
 
-[![Build Status](https://travis-ci.org/qdot/libappindicator-sys.svg?branch=master)](https://travis-ci.org/qdot/libappindicator-sys)
+[![Build Status](https://travis-ci.org/qdot/libappindicator-sys.svg?branch=master)](https://travis-ci.org/qdot/libappindicator-sys) [![Crates.io](https://img.shields.io/crates/v/libappindicator-sys.svg)](https://crates.io/crates/libappindicator-sys)
 
 Bindings for the libappindicator library. libappindicator provides
 cross-distribution/window system functions for creating systray icons
