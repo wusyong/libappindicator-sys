@@ -10,6 +10,9 @@ readme = "README.md"
 keywords = ["linux", "gui"]
 build = "build.rs"
 
+[dependencies]
+gtk-sys = "0.3"
+
 [build-dependencies]
 bindgen = "0.22"
 pkg-config = "0.3"
