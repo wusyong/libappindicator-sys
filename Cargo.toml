@@ -4,11 +4,14 @@ version = "0.1.1"
 authors = ["Kyle Machulis <kyle@nonpolynomial.com>"]
 description = "Rust raw bindings for libappindicator"
 license = "BSD-3-Clause"
-homepage = "http://github.com/qdot/libappindicator-rs"
-repository = "https://github.com/qdot/libappindicator-rs.git"
+homepage = "http://github.com/qdot/libappindicator-sys"
+repository = "https://github.com/qdot/libappindicator-sys.git"
 readme = "README.md"
 keywords = ["linux", "gui"]
 build = "build.rs"
+
+[badges]
+travis-ci = { repository = "qdot/libappindicator-sys" }
 
 [dependencies]
 gtk-sys = "0.3"
