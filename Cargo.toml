@@ -3,12 +3,13 @@ name = "libappindicator-sys"
 version = "0.1.1"
 authors = ["Kyle Machulis <kyle@nonpolynomial.com>"]
 description = "Rust raw bindings for libappindicator"
-license = "LGPL-2.1, LGPL-3"
+license = "LGPL-2.1/LGPL-3"
 homepage = "http://github.com/qdot/libappindicator-sys"
 repository = "https://github.com/qdot/libappindicator-sys.git"
 readme = "README.md"
 keywords = ["linux", "gui"]
 build = "build.rs"
+categories = ["external-ffi-bindings"]
 
 [badges]
 travis-ci = { repository = "qdot/libappindicator-sys" }
