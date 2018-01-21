@@ -15,7 +15,7 @@ categories = ["external-ffi-bindings"]
 travis-ci = { repository = "qdot/libappindicator-sys" }
 
 [dependencies]
-gtk-sys = "0.4"
+gtk-sys = "0.5"
 
 [build-dependencies]
 bindgen = "0.22"
