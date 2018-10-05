@@ -4,6 +4,9 @@
 
 extern crate gtk_sys;
 
-use gtk_sys::{GtkStatusIcon, GtkMenu, GtkWidget};
+use gtk_sys::{
+    GtkContainer, GtkContainerPrivate, GtkMenu, GtkMenuPrivate, GtkMenuShell, GtkMenuShellPrivate,
+    GtkStatusIcon, GtkStatusIconPrivate, GtkWidget, GtkWidgetPrivate,
+};
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
