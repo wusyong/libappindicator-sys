@@ -27,8 +27,6 @@ fn write_bindings(library : pkg_config::Library) {
         .expect("Couldn't write bindings!");
 }
 fn main() {
-    println!("cargo:rustc-link-lib=appindicator3");
-
     match pkg_config::probe_library("appindicator3") {
         Ok(library) => write_bindings(library),
         Err(_) => {
