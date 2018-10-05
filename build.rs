@@ -4,12 +4,17 @@ extern crate pkg_config;
 use std::env;
 use std::path::PathBuf;
 
-fn write_bindings(library : pkg_config::Library) {
+fn write_bindings(library: pkg_config::Library) {
     let mut bindings = bindgen::Builder::default()
         .rust_target(bindgen::RustTarget::Stable_1_25)
         .header("wrapper.h")
+        .prepend_enum_name(false)
+        .constified_enum_module("AppIndicatorCategory")
+        .constified_enum_module("AppIndicatorStatus")
         // Hide Gtk types, as these will be filled in via gtk-sys
         .blacklist_type("Gtk.*")
+        .blacklist_type("g(pointer|boolean)")
+        .blacklist_type("^_?G.*")
         .whitelist_type(".*AppIndicator.*")
         .whitelist_function("app_indicator_.*");
 
@@ -29,11 +34,9 @@ fn write_bindings(library : pkg_config::Library) {
 fn main() {
     match pkg_config::probe_library("appindicator3") {
         Ok(library) => write_bindings(library),
-        Err(_) => {
-            match pkg_config::probe_library("appindicator3-0.1") {
-                Ok(library) => write_bindings(library),
-                Err(_) => panic!("libappindicator3 library not found!")
-            }
-        }
+        Err(_) => match pkg_config::probe_library("appindicator3-0.1") {
+            Ok(library) => write_bindings(library),
+            Err(_) => panic!("libappindicator3 library not found!"),
+        },
     };
 }
