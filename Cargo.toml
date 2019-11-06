@@ -1,6 +1,6 @@
 [package]
 name = "libappindicator-sys"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["Kyle Machulis <kyle@nonpolynomial.com>"]
 description = "Rust raw bindings for libappindicator"
 license = "LGPL-2.1/LGPL-3.0"
@@ -15,8 +15,8 @@ categories = ["external-ffi-bindings"]
 travis-ci = { repository = "qdot/libappindicator-sys" }
 
 [dependencies]
-gtk-sys = "0.6"
+gtk-sys = "0.9.0"
 
 [build-dependencies]
-bindgen = "0.22"
-pkg-config = "0.3"
+bindgen = "0.51.1"
+pkg-config = "0.3.17"
